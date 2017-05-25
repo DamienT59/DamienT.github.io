@@ -15,16 +15,11 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: silver;
 }
 
 li {
     float: left;
-    border-right: 1px solid white;
-}
- 
-li:last-child {
-    border-left: 1px solid white;
 }
 
 li a {
@@ -32,11 +27,13 @@ li a {
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    text-decoration: underline;
+    line-height:128px;"
 }
 
 li a:hover:not(.active) {
-    background-color: grey;
+    text-decoration: green underline;
+    color: green;
 }
  
 .active {
@@ -48,15 +45,18 @@ li a:hover:not(.active) {
  .margeD {
   margin-left: 80px;
  }
+ .center {
+    margin: auto;
+    width: 345px;   
+}
 </style>
 </head>
 
 <body>
-<ul>
-  <li><a class="active" href="https://damient59.github.io/DamienT.github.io/">Home</a></li>
+<ul class="center">
   <li><a href="https://damient59.github.io/DamienT.github.io/logiciels.html">Logiciels</a></li>
-  <li style="float:center"><a href="https://damient59.github.io/DamienT.github.io/"><img src="http://orig08.deviantart.net/0b87/f/2012/290/b/0/green_lantern_x_men_logo_test_1_by_kalel7-d5i347c.png" alt="Logo Test" style="width:128px;height:128px;"></a>
-  <li style="float:right"><a href="https://damient59.github.io/DamienT.github.io/about.html">A propos</a></li>
+  <li><a href="https://damient59.github.io/DamienT.github.io/"><img src="http://orig08.deviantart.net/0b87/f/2012/290/b/0/green_lantern_x_men_logo_test_1_by_kalel7-d5i347c.png" alt="Logo Test" style="width:130px;height:130px;border-radius:100%;"></a>
+  <li><a href="https://damient59.github.io/DamienT.github.io/about.html">A propos</a></li>
 </ul>
  
  <p><h1><span class="margeT">Bienvenue sur DamienT.github.io</span></h1></p>
