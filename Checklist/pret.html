@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>DT_Checklist</title>
+	<style>
+		body {
+			background: SteelBlue;
+			margin: 0;
+		}
+		header {
+			background: white;
+			left: 0;
+			position: fixed;
+			height: 120px;
+			width: 100%;
+		}
+		content {
+			position: fixed;
+			width: 100%;
+			padding: 120px 0px 80px 0px;
+		}
+		footer {
+			background: white;
+			bottom: 0;
+			position: fixed;
+			height: 80px;
+			width: 100%;
+		}
+		table {
+			width: 100%;
+		}
+		input[type="checkbox"] {
+			position: absolute;
+			left: -9999px;
+		}
+		input[type="checkbox"] + label:before {
+			content:"";
+			color: white;
+			display: inline-block;
+			width: 100px;
+			height: 20px;
+			background:black;
+			margin-right: 15px;
+		}
+		input[type="checkbox"] + label {
+			color: white;
+		}
+		input[type="checkbox"]:checked + label:before {
+			background:orange;
+		}
+		.sign {
+			width:400px;
+			height:100px;
+			background-color: white;
+			border-style: solid;
+			border-color: grey;			
+		}
+	</style>
+</head>
+	
+<body>
+	<header>
+		<table>
+			<tr>
+				<td style="width:20%;">
+					<img src="DTLogo.png" alt="Logo DT" style="height: 110px;">
+				</td>
+				<td style="font-family:Impact;color: SteelBlue;font-size:300%; text-align:center;width: 60%;">
+					Checklist Prêt Matériel
+				</td>
+				<td style="width:20%;">
+					<img src="DTLogo.png" alt="Logo DT" style="height: 110px;float: right;">
+				</td>
+			</tr>
+		</table>
+	</header>
+	<content>
+		<form method="post" action="">
+			<br>
+			<div style="margin-left: 10px;">
+				<table>
+					<tr>
+						<td style="background-color: grey; width: 10%">
+							<label>Identifiant :</label>
+						</td>
+						<td style="width: 10%;">
+							<input type="text" placeholder="Ex: FR00001" name="ID" id="ID"/>
+						</td>
+						<td style="width: 10%;">
+							
+						</td>
+						<td style="width: 10%;">
+							
+						</td>
+						<td style="width: 10%;">
+							
+						</td>
+						<td style="width: 10%;">
+								
+						</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<div style="margin-left: 10px;">
+				<table>
+						<tr>
+							<td style="background-color: grey; width: 10%">
+								<label>Prénom :</label>
+							</td>
+							<td style="width: 10%;">
+								<input type="text" name="Prenom" id="Prenom"/>
+							</td>
+							<td style="background-color: grey; width: 10%">
+								<label>Nom :</label>
+							</td>
+							<td style="width: 10%;">
+								<input type="text" name="Nom" id="Nom"/>
+							</td>
+							<td style="background-color: grey; width: 10%">
+								<label>Date de prêt :</label>
+							</td>
+							<td style="width: 10%;">
+								<input type="date"  name="Date" id="Date"/>
+							</td>
+						</tr>
+				</table>
+			</div>
+			<br>
+			<div style="margin-left: 10px;">
+				<table>
+					<tr>
+						<td style="width: 60%;">
+							<table>
+								<tr>
+									<td>
+										<input id="PC" name="PC" type="checkbox"/><label for="PC">Ordinateur</label>
+									</td>
+									<td>
+										<input type="text" placeholder="Ex: PC00001"/ name="refPC" id="refPC">
+									</td>
+									<td>
+										<input id="AlimPC" name="AlimPC" type="checkbox"/><label for="AlimPC">Alimentation</label>
+									</td>
+									<td>
+										<select name="refAlim" id="refAlim">
+											<option value="Lenovo">Lenovo</option>
+											<option value="Dell">Dell</option>
+											<option value="HP">HP</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input id="ecran" name="ecran" type="checkbox"/><label for="ecran">Ecran</label>
+									</td>
+									<td>
+										<input type="text" name="refEcran" id="refEcran" value="E"/>
+									</td>
+									<td>
+										<input id="HDD" name="HDD" type="checkbox"/><label for="HDD">Disque dur externe</label>
+									</td>
+									<td>
+										<input type="text" placeholder="Ex: HDD0001" name="refHDD" id="refHDD" />
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td style="width: 40%;height: 100%;">
+							<table>
+								<tr>
+									<td style="font-family: stencil;color: white;">
+									Signature Collaborateur
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<div class="sign"></div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<table>
+					<tr>
+						<td style="float: right;">
+							<input type="submit" value="Valider" />
+						</td>
+						<td>
+							<input type="reset" value="Reset" />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</content>
+	<footer>
+		<table>
+			<tr>
+				<td>
+					<a href="index.html"><img src="home.png" alt="add" style="height: 75px;"></a>
+				</td>
+				<td style="font-family:Aharoni;color: SteelBlue;font-size:300%; text-align:center;float: right;padding-top:15px;">
+					DamienT.github.io
+				</td>
+			</tr>
+		</table>
+	</footer>
+</body>
+
+</html> 
